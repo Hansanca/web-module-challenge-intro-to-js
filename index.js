@@ -256,7 +256,8 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(){
+function miles(km){
+  return km * 0.621371
 } 
 
 
@@ -288,11 +289,16 @@ Using the annoyingSong function below do the following:
 
 3. Outside of the function, Make a loop that invokes annoying song with a number that decreases until it gets to 1 bottle left. 
 4. Each time the annoyingSong is run from this loop, it should console.log the string that was returned. 
-*/
+*//////
 
-function annoyingSong(){
+function annoyingSong(number){
+  while (number > 1){
+    number -= 1;
+    return(`${number +1} bottles of soda on the wall, ${number +1} bottles of soda, take one down pass it around ${number} bottles of soda on the wall`)
+  }
+
 }
-// lol
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -308,20 +314,25 @@ Using the grade function below do the following:
  60-69 should return 'you got a D'
  below should return 'you got an F'
 */
-
-function grade(A, B, C, D, F){
-if (grade <= 100){
-  return "A";
-} else if (grade <= 89){
-  return "B";
-}else if (grade <= 79){
-  return "C";
-}else if (grade <= 69){
-  return "D"
-}else 
-return "F"
-}
-
+// done!!
+function grade(score){
+    if (score >= 90) {
+      return "you got an A"
+    }
+    if (score < 90 && score >= 80) {
+      return "you got a B"
+    }
+    if (score < 80 && score >= 70) {
+      return "you got a C"
+    }
+    if (score < 70 && score >= 60) {
+      return "you got a D"
+    }
+    if (score < 60) {
+      return "you got an F"
+    }
+  }
+  grade()
 
 
 /*💪💪💪💪💪💪💪💪💪💪 Stretch 💪💪💪💪💪💪💪💪💪💪*/
